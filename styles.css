@@ -212,3 +212,14 @@ h2 {
   font-optical-sizing: auto;
   margin-top: -20px;
 }
+
+a:link {
+  color: #333532; /* Color del texto */
+  text-decoration-color: #333532; /* Color del subrayado */
+}
+
+/* Enlace clickeado (ya visitado) */
+a:visited {
+  color: #08a10f;
+  text-decoration-color: #08a10f;
+}
