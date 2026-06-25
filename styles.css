@@ -214,14 +214,14 @@ h2 {
 }
 
 a:link {
-  color: #333532; /* Color del texto */
-  text-decoration-color: #333532; /* Color del subrayado */
+  color: #08a10f; /* Color del texto */
+  text-decoration-color: #08a10f; /* Color del subrayado */
 }
 
 /* Enlace clickeado (ya visitado) */
 a:visited {
-  color: #08a10f;
-  text-decoration-color: #08a10f;
+  color: #333532;
+  text-decoration-color: #333532;
 }
 
 /* ============================================
