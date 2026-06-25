@@ -223,3 +223,161 @@ a:visited {
   color: #08a10f;
   text-decoration-color: #08a10f;
 }
+
+/* ============================================
+   RESPONSIVE: Tablets y pantallas medianas
+   ============================================ */
+@media (max-width: 1024px) {
+  .box-lateral {
+    width: 180px;              /* un poco más estrecho */
+    padding: 15px;
+    margin-left: 5px;
+  }
+  .box-central {
+    margin-left: 210px;        /* ajustamos el margen para que no se solape */
+    padding: 15px;
+  }
+  .logo-dibujo {
+    width: 120px;
+  }
+  .logo-letras {
+    width: 120px;
+    margin-top: -40px;
+  }
+  h2 {
+    font-size: 38px;           /* reducimos títulos */
+  }
+}
+
+/* ============================================
+   RESPONSIVE: Móviles y pantallas muy pequeñas
+   ============================================ */
+@media (max-width: 768px) {
+  /* --- Menú lateral (ahora será cabecera) --- */
+  .box-lateral {
+    position: static;          /* quitamos el fixed */
+    width: 100%;               /* ocupa todo el ancho */
+    height: auto;              /* altura automática según contenido */
+    margin: 10px auto;         /* centrado con margen */
+    padding: 15px 10px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;        /* centra el texto e imágenes */
+  }
+
+  /* --- Contenido principal (debajo del menú) --- */
+  .box-central {
+    margin-left: 0;            /* quitamos el margen izquierdo */
+    margin-top: 10px;          /* separación con el menú */
+    padding: 15px 10px;
+    min-height: auto;          /* que se ajuste al contenido */
+  }
+
+  /* --- Logos más pequeños y centrados --- */
+  .logo-dibujo {
+    width: 100px;
+    margin-top: -10px;
+  }
+  .logo-letras {
+    width: 120px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+  }
+
+  /* --- Títulos --- */
+  h2 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  /* --- Navegación: los enlaces en fila o columna según prefieras --- */
+  .box-lateral nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    list-style:none;
+  }
+  .box-lateral nav ul li {
+    margin: 0;
+  }
+  .box-lateral nav ul li a {
+    font-size: 14px;
+    padding: 5px 10px;
+    display: inline-block;
+  }
+
+  /* --- Reproductores: una columna en móvil --- */
+  .reproductores-container {
+    grid-template-columns: 1fr;   /* una sola columna */
+    justify-items: center;        /* centra las tarjetas */
+  }
+
+  .player-card {
+    width: 100%;                 /* ocupa todo el ancho disponible */
+    max-width: 320px;            /* pero no más de 320px para que no se estiren demasiado */
+    margin: 10px auto;
+  }
+
+  .player-cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;         /* mantiene el cuadrado */
+  }
+
+  .player-img {
+    border-radius: 50%;
+  }
+
+  .player-controls {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .play-btn-bottom, .download-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    height: 4px;
+  }
+
+  .song-title {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: -10px;
+  }
+}
+
+/* ============================================
+   Ajustes extra para móviles muy pequeños (< 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .box-lateral {
+    padding: 10px 5px;
+    margin: 5px;
+  }
+  .box-central {
+    padding: 10px 5px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .logo-dibujo {
+    width: 80px;
+  }
+  .logo-letras {
+    width: 100px;
+    margin-top: -25px;
+  }
+  .player-card {
+    max-width: 280px;
+  }
+  .player-controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
