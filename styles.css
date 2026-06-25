@@ -1,0 +1,214 @@
+body {
+    background-color: black;
+
+}
+
+
+.box-lateral{
+    background-color: #fbed09;
+    border-radius: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 210px;
+    height: 89vh;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+
+.box-central{
+    background-color: rgba(255, 255, 255, 0.932);
+    border-radius: 30px;
+    min-height: 89vh;
+    height:auto;
+    margin-left: 260px;
+    margin-top: 2px;
+    padding: 20px;
+}
+    
+
+.logo-dibujo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+.logo-letras {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -57px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+.player-card {
+  display: inline-block;   /* para que varios se pongan en fila */
+  margin: 20px;
+  width: 250px;            /* mismo ancho que el cuadrado */
+}
+
+/* Cuadrado negro (contenedor de la imagen) */
+.player-cover {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  border-radius: 20px;     /* esquinas redondeadas (opcional) */
+  overflow: hidden;        /* asegura que la imagen no se salga */
+}
+
+.reproductores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+
+/* Imagen circular que ocupa todo el cuadrado */
+.player-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* la imagen cubre todo sin deformarse */
+  border-radius: 50%;      /* la hace circular */
+  transition: all 0.2s;
+}
+
+/* Animación de giro */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.player-img.rotating {
+  animation: spin 4s linear infinite;
+}
+
+/* Botón de play/pausa centrado sobre la imagen */
+.play-btn-overlay {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  backdrop-filter: blur(4px);
+  transition: 0.2s;
+}
+.play-btn-overlay:hover {
+  background: black;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+/* Controles inferiores (borde negro con esquinas redondeadas) */
+.player-controls {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.932);
+  border: 2px solid black;
+  border-radius: 40px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+/* Botón de play/pausa inferior */
+.play-btn-bottom {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 36px;
+  height:auto;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; 
+  height: 38px;
+}
+.play-btn-bottom:hover {
+  transform: scale(1.05);
+}
+
+/* Barra de progreso */
+.progress-bar {
+  flex: 1;
+  height: 5px;
+  -webkit-appearance: none;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #fbed09;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Botón de descarga */
+.download-btn {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 36px;
+  height:auto;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; 
+  height: 38px;
+}
+
+.download-btn:hover {
+  background-color: #fbed09;
+  color: black;
+  transform: scale(1.05);
+}
+
+.box-lateral {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 50px;
+    color: #2ee70e;
+}
+
+.song-title {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-optical-sizing: auto;
+  margin-top: -20px;
+}
